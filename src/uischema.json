@@ -1,54 +1,87 @@
 {
-  "type": "VerticalLayout",
+  "type": "Group",
+  "label":"MY group",
   "elements": [
     {
       "type": "Control",
       "label": "Completed",
-      "scope": "#/properties/done"
+      "scope": "#/properties/done",
+      "options": {
+        "grid": {
+          "sm": 12,
+          "md": 12
+        }
+       
+      }
     },
     {
       "type": "Control",
-      "scope": "#/properties/name"
+      "scope": "#/properties/name",
+      "options": {
+        "grid": {
+          "sm": 12,
+          "md": 7
+        }
+      }
     },
     {
-      "type": "HorizontalLayout",
-      "elements": [
-        {
-          "type": "Control",
-          "scope": "#/properties/due_date"
-        },
-        {
-          "type": "Control",
-          "scope": "#/properties/rating"
+      "type": "Control",
+      "scope": "#/properties/due_date",
+      "options":{
+        "grid":{
+          "sm":5,
+          "md":5
+        
         }
-      ]
+      }
     },
     {
-      "type": "HorizontalLayout",
-      "elements": [
-        {
-          "type": "Control",
-          "scope": "#/properties/recurrence"
-        },
-        {
-          "type": "Control",
-          "scope": "#/properties/recurrence_interval",
-          "rule": {
-            "effect": "HIDE",
-            "condition": {
-              "type": "LEAF",
-              "scope": "#/properties/recurrence",
-              "expectedValue": "Never"
-            }
-          }
+      "type": "Control",
+      "scope": "#/properties/rating",
+      "options":{
+        "grid":{
+          "sm":7,
+          "md":3
         }
-      ]
+      }
+    },
+    {
+      "type": "Control",
+      "scope": "#/properties/recurrence",
+      "options":{
+        "grid":{
+          "sm":5,
+          "md":9
+        }
+      }
+    },
+    {
+      "type": "Control",
+      "scope": "#/properties/recurrence_interval",
+      "rule": {
+        "effect": "HIDE",
+        "condition": {
+          "type": "LEAF",
+          "scope": "#/properties/recurrence",
+          "expectedValue": "Never"
+        }
+      },
+      "options":{
+        "grid":{
+          "sm":5,
+          "md":12
+        }
+      }
     },
     {
       "type": "Control",
       "scope": "#/properties/description",
       "options": {
-        "multi": true
+        "multi": true,
+        "grid": {
+          "sm": 7,
+          "md": 7
+        }
       }
     }
   ]
