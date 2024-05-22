@@ -1,0 +1,18 @@
+{
+    "schema": {
+        "type": "object",
+        "properties": {
+            "name": {
+                "type": "string"
+            },
+            "age": {
+                "type": "integer"
+    }}},
+    "uischema":{},
+    "data": {
+        "name": "John Doe",
+        "age": 18
+    },
+    "middleware":"/middleware/validate.js"
+
+}

@@ -58,12 +58,6 @@ export const renderLayoutElements = (
         md={options?.grid?.md}
         style={options?.styles}
       >
-        {'scope' in child &&
-        child.scope === '#/properties/rating' &&
-        data.rating > 3 ? (
-          <p style={{ backgroundColor: 'red' }}>Perfect</p>
-        ) : null}
-
         <JsonFormsDispatch
           uischema={child}
           schema={schema}
